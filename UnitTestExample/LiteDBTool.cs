@@ -35,7 +35,7 @@ namespace UnitTestExample
         public void Insert<T>(T data)
         {
             using var db = GetDB();
-            var insertResult = db.GetCollection<T>().Insert(data);
+            _ = db.GetCollection<T>().Insert(data);
         }
 
         public bool Delete<T>(int id)
